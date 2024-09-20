@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
     },
     fishImage: {
         width: '100%',
-        height: 200,
+        height: 150,
         resizeMode: 'cover',
     },
     detailsContainer: {

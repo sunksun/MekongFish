@@ -1,51 +1,56 @@
 import React from 'react';
-import { View, Text, StyleSheet, ImageBackground, TouchableOpacity, SafeAreaView } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity, SafeAreaView } from 'react-native';
 
 const HomeScreen = ({ navigation }) => {
   return (
-    <ImageBackground 
-      source={require('../assets/mekong-river-image.jpg')}
-      style={styles.backgroundImage}
-    >
-      <SafeAreaView style={styles.container}>
-        <View style={styles.topContainer}>
-          <Text style={styles.title}>พันธุ์ปลาแม่น้ำโขงตอนล่าง</Text>
-          <Text style={styles.subtitle}>จาก เชียงคาน ถึง ปากชม</Text>
-        </View>
-        <View style={styles.bottomContainer}>
-          <TouchableOpacity
-            style={styles.button}
-            onPress={() => navigation.navigate('FishList')}
-          >
-            <Text style={styles.buttonText}>ดูรายชื่อปลา</Text>
-          </TouchableOpacity>
-          <Text style={styles.subtitle2}>ชญาพรรธน์ เมธีธนันวัฒน์. (2555)</Text>
-          <Text style={styles.subtitle3}>องค์กรแม่น้ำเพื่อชีวิต (Living River Siam)</Text>
-        </View>
-      </SafeAreaView>
-    </ImageBackground>
+    <SafeAreaView style={styles.container}>
+      <View style={styles.topContainer}>
+        <Text style={styles.title}>พันธุ์ปลาแม่น้ำโขงตอนล่าง</Text>
+        <Text style={styles.subtitle}>จาก เชียงคาน ถึง ปากชม</Text>
+        <Text style={styles.subtitle2}>ชญาพรรธน์ เมธีธนันวัฒน์. (2555)</Text>
+        <Text style={styles.subtitle3}>องค์กรแม่น้ำเพื่อชีวิต (Living River Siam)</Text>
+      </View>
+      <View style={styles.middleContainer}>
+        <Image 
+          source={require('../assets/mekong-river-image.jpg')}
+          style={styles.image}
+        />
+      </View>
+      <View style={styles.bottomContainer}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate('FishList')}
+        >
+          <Text style={styles.buttonText}>ดูรายชื่อปลา</Text>
+        </TouchableOpacity>
+      </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
-  backgroundImage: {
-    flex: 1,
-    resizeMode: 'cover',
-  },
   container: {
     flex: 1,
-    backgroundColor: 'rgba(0,0,0,0.5)',
+    backgroundColor: '#f0f0f0',
   },
   topContainer: {
     flex: 1,
-    justifyContent: 'flex-start',
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 50,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingTop: 20,
+  },
+  middleContainer: {
+    flex: 2,
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   bottomContainer: {
-    justifyContent: 'flex-end',
+    flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingBottom: 5,
+    backgroundColor: 'rgba(0,0,0,0.5)',
+    paddingBottom: 20,
   },
   title: {
     fontSize: 24,
@@ -59,16 +64,23 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     textAlign: 'center',
+    marginBottom: 5,
   },
   subtitle2: {
+    fontSize: 12,
+    color: 'white',
+    textAlign: 'center',
+    marginTop: 5,
+  },
+  subtitle3: {
     fontSize: 10,
     color: 'white',
     textAlign: 'center',
   },
-  subtitle3: {
-    fontSize: 8,
-    color: 'white',
-    textAlign: 'center',
+  image: {
+    width: '100%',
+    height: '100%',
+    resizeMode: 'cover',
   },
   button: {
     backgroundColor: '#4CAF50',
