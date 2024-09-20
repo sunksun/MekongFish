@@ -1,16 +1,17 @@
 {
   "expo": {
-    "sdkVersion": "50.0.0",
-    "name": "MekongFish",
-    "slug": "MekongFish",
-    "version": "1.0.1",
+    "name": "Mekong Fish",
+    "slug": "Mekong-Fish",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,20 +22,11 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      },
-      "package": "com.sunksun.MekongFish",
-      "versionCode": 1,
-      "compileSdkVersion": 34,
-      "targetSdkVersion": 34
+        "backgroundColor": "#FFFFFF"
+      }
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "fbb87df6-7419-43e2-b57a-7de5524b6b03"
-      }
     }
   }
 }
